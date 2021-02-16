@@ -3,6 +3,7 @@ function banker()
     var n = document.getElementById('process').value;
                   var re = document.getElementById('resource').value.split(" ");
                   var m = re.length;
+                  var t1 = document.getElementById('needtable');
                   var dummy = document.getElementById('max').value.split("\n");
                   var max = new Array(dummy.length);
                   for(var i = 0; i < dummy.length; i++)
@@ -67,5 +68,18 @@ function banker()
                          }
                       }
                   }
+                  for(var i = 0; i < need.length; i++)
+                  {
+                      var tr = document.createElement('tr');
+                      for(var j = 0; j < m; j++)
+                      {
+                          var td = document.createElement('td');
+                          var e = document.createTextNode(max[i][j]);
+                          td.appendChild(e);
+                          tr.appendChild(td);
+                      }
+                      t1.appendChild(tr);
+                  }
+                  console.log(t1);
                   document.getElementById('ans').innerHTML = ans;
 }

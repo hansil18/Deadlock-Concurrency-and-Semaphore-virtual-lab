@@ -3,6 +3,7 @@ body {
   margin: 0;
 }
 
+
 .left {
   width: 35%;
 }
@@ -29,20 +30,8 @@ div {
   margin: 10px 0;
 }
 
-table {
-display: table;
-width:100%;
-table-layout: fixed;
-margin-top: 10px;
-}
 
-table tr {
-display: table-cell;
-}
 
-table tr td {
-display: block;
-}
 
 @font-face {
   font-family: Ubuntu-Bold;
