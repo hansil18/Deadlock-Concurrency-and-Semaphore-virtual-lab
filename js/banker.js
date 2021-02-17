@@ -1,7 +1,7 @@
 function banker()
 {
 
-    var n = document.getElementById('process').value;
+                  var n = document.getElementById('process').value;
                   var re = document.getElementById('resource').value.split(" ");
                   var m = re.length;
                   var t1 = document.getElementById('needtable');
