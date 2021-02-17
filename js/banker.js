@@ -1,5 +1,6 @@
 function banker()
 {
+
     var n = document.getElementById('process').value;
                   var re = document.getElementById('resource').value.split(" ");
                   var m = re.length;
@@ -61,7 +62,7 @@ function banker()
                               {
                                   for(var y = 0; y < m; y++)
                                   {
-                                      re[y]  = (+re[y]) + (+allocated[y][j]);
+                                      re[y]  += allocated[j][y];
                                   }
                                   f[j] = 1;
                                   ans[track++] = j;
@@ -69,33 +70,35 @@ function banker()
                          }
                       }
                   }
+
                   var h = document.getElementById('needinfo');
-                  h.innerHTML = '<h5><i class="fas fa-table pr-3"></i>need table:</h5>';
-                  for(var i = 0; i < need.length; i++)
-                  {
-                      var tr = document.createElement('tr');
-                      for(var j = 0; j < m; j++)
-                      {
-                          var td = document.createElement('td');
-                          var e = document.createTextNode(max[i][j]);
-                          td.appendChild(e);
-                          tr.appendChild(td);
-                      }
-                      t1.appendChild(tr);
-                  }
-                  var hh = document.getElementById('allocatedinfo');
-                  hh.innerHTML = '<h5><i class="fas fa-table pr-3"></i>allocated table:</h5>';
-                  for(var i = 0; i < need.length; i++)
-                  {
-                      var tr = document.createElement('tr');
-                      for(var j = 0; j < m; j++)
-                      {
-                          var td = document.createElement('td');
-                          var e = document.createTextNode(allocated[i][j]);
-                          td.appendChild(e);
-                          tr.appendChild(td);
-                      }
-                      t2.appendChild(tr);
-                  }
-                  document.getElementById('ans').innerHTML = ans;
+        h.innerHTML = '<h5><i class="fas fa-table pr-3"></i>need table:</h5>';
+        for(var i = 0; i < need.length; i++)
+        {
+            var tr = document.createElement('tr');
+            for(var j = 0; j < m; j++)
+            {
+                var td = document.createElement('td');
+                var e = document.createTextNode(max[i][j]);
+                td.appendChild(e);
+                tr.appendChild(td);
+            }
+            t1.appendChild(tr);
+        }
+        var hh = document.getElementById('allocatedinfo');
+        hh.innerHTML = '<h5><i class="fas fa-table pr-3"></i>allocated table:</h5>';
+        for(var i = 0; i < need.length; i++)
+        {
+            var tr = document.createElement('tr');
+            for(var j = 0; j < m; j++)
+            {
+                var td = document.createElement('td');
+                var e = document.createTextNode(allocated[i][j]);
+                td.appendChild(e);
+                tr.appendChild(td);
+            }
+            t2.appendChild(tr);
+        }
+        console.log(t1);
+        document.getElementById('ans').innerHTML = ans;
 }
