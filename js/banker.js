@@ -99,6 +99,18 @@ function banker()
             }
             t2.appendChild(tr);
         }
-        console.log(t1);
-        document.getElementById('ans').innerHTML = ans;
+        console.log(track);
+        var pr = "";
+        if(track != n)
+        {
+            pr += "DEADLOCK";
+        }
+        else 
+        {
+            for(var i = 0; i < n; i++)
+            {
+                pr += "P"+ans[i]+" ";
+            }
+        }
+        document.getElementById('ans').innerHTML = pr;
 }
