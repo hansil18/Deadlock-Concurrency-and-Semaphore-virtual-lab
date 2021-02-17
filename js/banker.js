@@ -4,6 +4,7 @@ function banker()
                   var re = document.getElementById('resource').value.split(" ");
                   var m = re.length;
                   var t1 = document.getElementById('needtable');
+                  var t2 = document.getElementById('alloctedtable');
                   var dummy = document.getElementById('max').value.split("\n");
                   var max = new Array(dummy.length);
                   for(var i = 0; i < dummy.length; i++)
@@ -68,6 +69,8 @@ function banker()
                          }
                       }
                   }
+                  var h = document.getElementById('needinfo');
+                  h.innerHTML = '<h5><i class="fas fa-table pr-3"></i>need table:</h5>';
                   for(var i = 0; i < need.length; i++)
                   {
                       var tr = document.createElement('tr');
@@ -80,6 +83,19 @@ function banker()
                       }
                       t1.appendChild(tr);
                   }
-                  console.log(t1);
+                  var hh = document.getElementById('allocatedinfo');
+                  hh.innerHTML = '<h5><i class="fas fa-table pr-3"></i>allocated table:</h5>';
+                  for(var i = 0; i < need.length; i++)
+                  {
+                      var tr = document.createElement('tr');
+                      for(var j = 0; j < m; j++)
+                      {
+                          var td = document.createElement('td');
+                          var e = document.createTextNode(allocated[i][j]);
+                          td.appendChild(e);
+                          tr.appendChild(td);
+                      }
+                      t2.appendChild(tr);
+                  }
                   document.getElementById('ans').innerHTML = ans;
 }
