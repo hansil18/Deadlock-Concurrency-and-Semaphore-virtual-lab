@@ -5,7 +5,9 @@ function banker()
                   var re = document.getElementById('resource').value.split(" ");
                   var m = re.length;
                   var t1 = document.getElementById('needtable');
+                  t1.innerHTML = "";
                   var t2 = document.getElementById('alloctedtable');
+                  t2.innerHTML = "";
                   var dummy = document.getElementById('max').value.split("\n");
                   var max = new Array(dummy.length);
                   for(var i = 0; i < dummy.length; i++)
@@ -76,6 +78,10 @@ function banker()
         for(var i = 0; i < need.length; i++)
         {
             var tr = document.createElement('tr');
+            var td = document.createElement('td');
+            var e = document.createTextNode('P'+(i+1));
+            td.appendChild(e);
+            tr.appendChild(td);
             for(var j = 0; j < m; j++)
             {
                 var td = document.createElement('td');
@@ -90,6 +96,10 @@ function banker()
         for(var i = 0; i < need.length; i++)
         {
             var tr = document.createElement('tr');
+            var td = document.createElement('td');
+            var e = document.createTextNode('P'+(i+1));
+            td.appendChild(e);
+            tr.appendChild(td);
             for(var j = 0; j < m; j++)
             {
                 var td = document.createElement('td');
@@ -103,7 +113,7 @@ function banker()
         var pr = "";
         if(track != n)
         {
-            pr += "DEADLOCK";
+            pr += '<i class="fas fa-lock pr-4">Deadlock';
         }
         else 
         {
