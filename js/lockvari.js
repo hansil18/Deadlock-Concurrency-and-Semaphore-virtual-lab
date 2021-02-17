@@ -1,14 +1,67 @@
 var entry_state = [];
+var track = 0;
+var lock = 0;
+function add_exit(id)
+{
+    lock = 0;
+    document.getElementById('exit_head').style.display = "";
+    var x = document.getElementById(id);
+    x.remove();
+    var z = document.getElementById('exit');
+    var s = '<button type="button" class="btn ml-3 my-2 third"  id = '+(id)+'>'+'process'+(id)+'</button>';
+    z.innerHTML += s;
+    if(entry_state.length != track)
+    {
+        lock = 1;
+        var jd = entry_state[track++];
+        console.log(jd);
+        var x = document.getElementById(jd);
+        x.remove();
+        var z = document.getElementById('cs');
+        var s = '<button type="button" class="btn ml-3 my-2 third" onclick="add_exit(this.id)" id = '+(jd)+'>'+'process'+(jd)+'</button>';
+        z.innerHTML += s;
+    }
+}
+function add_cs(id)
+{
+    if(lock == 1)
+    {
+        alert("some process is already present plz try again later");
+    }
+    else
+    {
+        lock = 1;
+        document.getElementById('cs_head').style.display = "";
+        var x = document.getElementById(id);
+        x.remove();
+        var z = document.getElementById('cs');
+        var s = '<button type="button" class="btn ml-3 my-2 third" onclick="add_exit(this.id)" id = '+(id)+'>'+'process'+(id)+'</button>';
+        z.innerHTML += s;
+       
+    }
+}
 function add_entry(id)
 {
-    document.getElementById('entry_head').style.display = "";
-    entry_state.push(id);
-    var x = document.getElementById(id);
-    x.style.display = "none";
-    var z = document.getElementById('entry');
-    var s = '<button type="button" class="btn ml-3 my-2 third" id = '+(id)+'>'+'process'+(id)+'</button>';
-    z.innerHTML += s;
-    console.log(z);
+    if(lock == 0)
+    {
+        lock = 1;
+        document.getElementById('cs_head').style.display = "";
+        var x = document.getElementById(id);
+        x.remove();
+        var z = document.getElementById('cs');
+        var s = '<button type="button" class="btn ml-3 my-2 third" onclick="add_exit(this.id)" id = '+(id)+'>'+'process'+(id)+'</button>';
+        z.innerHTML += s;
+    }
+    else 
+    {
+        document.getElementById('entry_head').style.display = "";
+        entry_state.push(id);
+        var x = document.getElementById(id);
+        x.remove();
+        var z = document.getElementById('entry');
+        var s = '<button type="button" class="btn ml-3 my-2 third" onclick="add_cs(this.id)" id = '+(id)+'>'+'process'+(id)+'</button>';
+        z.innerHTML += s;
+    }
 }
 
 function lockvari()
