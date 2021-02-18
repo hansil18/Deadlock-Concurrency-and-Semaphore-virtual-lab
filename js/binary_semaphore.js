@@ -1,4 +1,6 @@
 var entry_state = [];
+var n;
+var exit_state = 0;
 var track = 0;
 var lock = 0;
 var state = document.getElementById('lock_state');
@@ -6,13 +8,14 @@ var state = document.getElementById('lock_state');
 function add_exit(id)
 {
     lock = 0;
-    if(lock == 1)
+    exit_state++;
+    if(exit_state == n)
     {
-        state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+        state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
     }
     else 
     {
-        state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+        state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Semaphore state - 0';
     }
     document.getElementById('exit_head').style.display = "";
     var x = document.getElementById(id);
@@ -20,16 +23,16 @@ function add_exit(id)
     var z = document.getElementById('exit');
     var s = '<button type="button" class="btn ml-3 my-2 sixth"  id = '+(id)+'>'+'process'+(id)+'</button>';
     z.innerHTML += s;
-    if(entry_state.length != track)
+    if(entry_state != track)
     {
         lock = 1;
-        if(lock == 1)
+        if(exit_state == n)
         {
-            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
         }
         else 
         {
-            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Semaphore state - 0';
         }
         var jd = entry_state[track++];
         console.log(jd);
@@ -49,13 +52,13 @@ function add_cs(id)
     else
     {
         lock = 1;
-        if(lock == 1)
+        if(exit_state == n)
         {
-            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
         }
         else 
         {
-            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Semaphore state - 0';
         }
         document.getElementById('cs_head').style.display = "";
         var x = document.getElementById(id);
@@ -71,13 +74,13 @@ function add_entry(id)
     if(lock == 0)
     {
         lock = 1;
-        if(lock == 1)
+        if(exit_state == n)
         {
-            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
         }
         else 
         {
-            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Semaphore state - 0';
         }
         document.getElementById('cs_head').style.display = "";
         var x = document.getElementById(id);
@@ -100,7 +103,7 @@ function add_entry(id)
 
 function lockvari()
 {
-    var n = document.getElementById('process').value;
+    n = document.getElementById('process').value;
     //added
     document.getElementById('added_head').innerHTML = "Added State:";
     var t = document.getElementById('added');

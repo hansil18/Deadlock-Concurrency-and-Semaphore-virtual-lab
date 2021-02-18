@@ -129,6 +129,39 @@ button:hover {
     box-shadow: 0 0 10px 0  #333534 inset, 0 0 10px 4px  #333534;
   }
 
+  .fourth {
+    border-color: #0c2e6e;
+    color: #fff;
+    box-shadow: 0 0 40px 40px   #0c2e6e inset, 0 0 0 0  #0c2e6e;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .fourth:hover {
+    box-shadow: 0 0 10px 0  #0c2e6e inset, 0 0 10px 4px  #0c2e6e;
+  }
+
+  .sixth{
+    border-color: #54e031;
+    color: #fff;
+    box-shadow: 0 0 40px 40px   #54e031 inset, 0 0 0 0  #54e031;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .sixth:hover {
+    box-shadow: 0 0 10px 0  #54e031 inset, 0 0 10px 4px  #54e031;
+  }
+
+  .fifth{
+    border-color: #ad1717 ;
+    color: #fff;
+    box-shadow: 0 0 40px 40px   #ad1717 inset, 0 0 0 0  #ad1717;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .fifth:hover {
+    box-shadow: 0 0 10px 0  #ad1717 inset, 0 0 10px 4px  #ad1717;
+  }
+
 
 
 iframe {
