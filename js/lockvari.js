@@ -1,9 +1,19 @@
 var entry_state = [];
 var track = 0;
 var lock = 0;
+var state = document.getElementById('lock_state');
+
 function add_exit(id)
 {
     lock = 0;
+    if(lock == 1)
+    {
+        state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+    }
+    else 
+    {
+        state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+    }
     document.getElementById('exit_head').style.display = "";
     var x = document.getElementById(id);
     x.remove();
@@ -13,6 +23,14 @@ function add_exit(id)
     if(entry_state.length != track)
     {
         lock = 1;
+        if(lock == 1)
+        {
+            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+        }
+        else 
+        {
+            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+        }
         var jd = entry_state[track++];
         console.log(jd);
         var x = document.getElementById(jd);
@@ -31,6 +49,14 @@ function add_cs(id)
     else
     {
         lock = 1;
+        if(lock == 1)
+        {
+            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+        }
+        else 
+        {
+            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+        }
         document.getElementById('cs_head').style.display = "";
         var x = document.getElementById(id);
         x.remove();
@@ -45,6 +71,14 @@ function add_entry(id)
     if(lock == 0)
     {
         lock = 1;
+        if(lock == 1)
+        {
+            state.innerHTML = '<i class="fa fa-lock pr-2"></i>Lock State';
+        }
+        else 
+        {
+            state.innerHTML = '<i class="fa fa-unlock pr-2" aria-hidden="true"></i>Unlocked state';
+        }
         document.getElementById('cs_head').style.display = "";
         var x = document.getElementById(id);
         x.remove();
