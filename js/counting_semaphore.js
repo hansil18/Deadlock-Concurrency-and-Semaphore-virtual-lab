@@ -104,6 +104,9 @@ function lockvari()
     var n = document.getElementById('process').value;
     sema = document.getElementById('semaphore').value;
     state = document.getElementById('lock_state');
+    var entry_state = [];
+    track = 0;
+    lock = 0;
     console.log(sema);
     //added
     document.getElementById('added_head').innerHTML = "Added State:";

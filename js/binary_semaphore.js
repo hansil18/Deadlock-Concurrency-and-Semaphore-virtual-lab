@@ -1,14 +1,14 @@
 var entry_state = [];
 var n;
-var exit_state = 0;
 var track = 0;
+var exit_state = 0;
 var lock = 0;
 var state = document.getElementById('lock_state');
 
 function add_exit(id)
 {
-    lock = 0;
     exit_state++;
+    lock = 0;
     if(exit_state == n)
     {
         state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
@@ -23,7 +23,7 @@ function add_exit(id)
     var z = document.getElementById('exit');
     var s = '<button type="button" class="btn ml-3 my-2 sixth"  id = '+(id)+'>'+'process'+(id)+'</button>';
     z.innerHTML += s;
-    if(entry_state != track)
+    if(entry_state.length != track)
     {
         lock = 1;
         if(exit_state == n)
@@ -104,6 +104,11 @@ function add_entry(id)
 function lockvari()
 {
     n = document.getElementById('process').value;
+    entry_state = [];
+    track = 0;
+    exit_state = 0;
+    lock = 0;
+    state = document.getElementById('lock_state');
     //added
     document.getElementById('added_head').innerHTML = "Added State:";
     var t = document.getElementById('added');
