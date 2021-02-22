@@ -21,32 +21,32 @@
             </div>
         </nav>
               <!--submit-->
-              
               <div class = 'container pt-5 mt-5'>
                   <a href="turnvari.html" style="text-decoration: none;">
-                <button class="contact100-form-btn submit mt-5" >
+                <button class="contact100-form-btn submit mt-5">
                     <span>
                         Reset   
                     </span>
                 </button></a>
             </div>
         <!--table-->
-        <div class="contact100-form-title pt-3 pb-0" id = 'lock_state'>
-        <section class='border border-white'>
-            <div class="contact100-form-title pt-3 pb-0" id = 'noncritical_head'>Non-critical state:</div>
-            <div class = 'continer pl-4 d-flex justify-content-between' id='noncritical'>
-                <button class=" btn btn-dark p-3 btn-lg fourth ml-4" id="p1" onclick="while_state()">P1</button>
-                <button class="  btn btn-dark p-3 btn-lg fourth mr-5" id="p2" onclick="while_state()">P2</button>
-            </div>
-        </section>
-        <section class='border border-white '>
-            <div class="contact100-form-title pt-3 pb-0" id = 'while_head'>While state:</div>
-            <div class = 'continer pl-4 d-flex justify-content-between' id='while'></div>
-        </section>
-        <section class='border border-white '>
-            <div class="contact100-form-title pt-3 pb-0" id = 'critical_head'>Critical State:</div>
-            <div class = 'continer pl-4 d-flex justify-content-between' id='critical'></div>
-        </section>
+        <div class="contact100-form-title pt-3 pb-0" id = 'turn_state'></div>
+        <div class="container-fluid pt-3 pb-0" id = 'lock_state'>
+            <section class='border border-white'>
+                <div class="contact100-form-title pt-3 pb-0" id = 'noncritical_head'>Non-critical state:</div>
+                <div class = 'text-center pl-4' id='noncritical'>
+                    <button class=" btn btn-dark p-3 btn-lg fourth mr-4" id = '1' onclick="while_state(this.id)">P1</button>
+                    <button class="  btn btn-dark p-3 btn-lg fourth mr-4" id = '2' onclick="while_state(this.id)">P2</button>
+                </div>
+            </section>
+            <section class='border border-white '>
+                <div class="contact100-form-title pt-3 pb-0" id = 'while_head'>While state:</div>
+                <div class = 'text-center pl-4' id='while'></div>
+            </section>
+            <section class='border border-white '>
+                <div class="contact100-form-title pt-3 pb-0" id = 'critical_head'>Critical State:</div>
+                <div class = 'text-center pl-4' id='critical'></div>
+            </section>
         </div>
         <!--button-->
         
