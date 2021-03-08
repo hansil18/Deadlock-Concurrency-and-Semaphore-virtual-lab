@@ -44,7 +44,7 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  var pics=[".pic1",".pic2",".pic3",".pic4",".pic5",".pic6",".pic7",".pic8",".pic9",".pic10"];
+  var pics=[".pic1",".pic3",".pic4",".pic5",".pic6",".pic7",".pic9",".pic10"];
 
   pics.forEach(function(ele){
     $(ele).hover(function(){
