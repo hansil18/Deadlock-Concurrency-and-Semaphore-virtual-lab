@@ -113,7 +113,7 @@ function banker()
         var pr = "";
         if(track != n)
         {
-            pr += '<i class="fas fa-lock pr-4">Deadlock';
+            pr += '<i class="fas fa-lock"> <section> Deadlock</section>';
         }
         else 
         {

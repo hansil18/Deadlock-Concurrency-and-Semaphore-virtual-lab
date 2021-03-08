@@ -5,7 +5,7 @@ function pro()
     var s = document.getElementById('space').value;
     var p = document.getElementById('produced').value;
     var t = document.getElementById('added'); 
-
+s++;
     if(parseInt(track)+parseInt(p) >= s)
     {
         alert("no space");
@@ -26,7 +26,7 @@ function con()
     var s = document.getElementById('space').value;
     var c = document.getElementById('consumed').value;
     var t = document.getElementById('added');
-
+s++;
     if(track - c >= 0)
     {
         for(var i = track; i > track-c; i--)
