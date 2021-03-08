@@ -8,8 +8,8 @@ var state = document.getElementById('lock_state');
 function add_exit(id)
 {
     exit_state++;
-    lock = 0;
-    if(exit_state == n)
+    lock = 1;
+    if(lock == 1)
     {
         state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
     }
@@ -25,8 +25,8 @@ function add_exit(id)
     z.innerHTML += s;
     if(entry_state.length != track)
     {
-        lock = 1;
-        if(exit_state == n)
+        lock = 0;
+        if(lock == 1)
         {
             state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
         }
@@ -45,14 +45,14 @@ function add_exit(id)
 }
 function add_cs(id)
 {
-    if(lock == 1)
+    if(lock == 0)
     {
         alert("some process is already present plz try again later");
     }
     else
     {
-        lock = 1;
-        if(exit_state == n)
+        lock = 0;
+        if(lock == 1)
         {
             state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
         }
@@ -71,10 +71,10 @@ function add_cs(id)
 }
 function add_entry(id)
 {
-    if(lock == 0)
+    if(lock == 1)
     {
-        lock = 1;
-        if(exit_state == n)
+        lock = 0;
+        if(lock == 1)
         {
             state.innerHTML = '<i class="fa fa-lock pr-2"></i>Semaphore State - 1';
         }
@@ -107,7 +107,7 @@ function lockvari()
     entry_state = [];
     track = 0;
     exit_state = 0;
-    lock = 0;
+    lock = 1;
     state = document.getElementById('lock_state');
     //added
     document.getElementById('added_head').innerHTML = "Added State:";
