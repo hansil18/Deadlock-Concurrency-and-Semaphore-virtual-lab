@@ -47,28 +47,24 @@
             <div>
                 <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">PRODUCER CONSUMER</h1>
                 <div class="hidden1" id="show">
-                    <div class="container">
+                    <div class="container" style="text-align: left;">
                             <p class="text-white justify-content-center">
-
-                                Synchronization problem. The producer produces items and enters them into the fixed size buffer. The consumer removes the items from the buffer and consumes them.
-                                <br>
-<h4 style="color: white; font-weight: bold;">Analysis of Producer Consumer approach: </h4><br>
-<p style="color: white;"> 
-    In computing, the producer-consumer problem (also known as the bounded-buffer problem) is a classic example of a multi-process synchronization problem. The problem describes two processes, the producer and the consumer, which share a common, fixed-size buffer used as a queue.
-    The producer’s job is to generate data, put it into the buffer, and start again.
-    At the same time, the consumer is consuming the data (i.e. removing it from the buffer), one piece at a time.
-     <br> </br>
-     <h4 style="color: white; font-weight: bold;">Problem: </h4><br>
-     <p style="color: white;"> 
-     To make sure that the producer won’t try to add data into the buffer if it’s full and that the consumer won’t try to remove data from an empty buffer.
- </p><br></br>
- <h4 style="color: white; font-weight: bold;">Solution:</h4><br>
- <p style="color: white;"> The producer is to either go to sleep or discard data if the buffer is full. The next time the consumer removes an item from the buffer, it notifies the producer, who starts to fill the buffer again. In the same way, the consumer can go to sleep if it finds the buffer to be empty. The next time the producer puts data into the buffer, it wakes up the sleeping consumer. An inadequate solution could result in a deadlock where both processes are waiting to be awakened.
- </p><br></br>
- 
-
-
-
+                                Synchronization problem. The producer produces items and enters them into the fixed size buffer. The consumer removes the items from the buffer and consumes them.<br>
+                            </p>
+                            <h4 style="color: white; font-weight: bold;">Analysis of Producer Consumer approach: </h4><br>
+                                <p style="color: white;"> 
+                                    In computing, the producer-consumer problem (also known as the bounded-buffer problem) is a classic example of a multi-process synchronization problem. The problem describes two processes, the producer and the consumer, which share a common, fixed-size buffer used as a queue.
+                                    The producer’s job is to generate data, put it into the buffer, and start again.
+                                    At the same time, the consumer is consuming the data (i.e. removing it from the buffer), one piece at a time.
+                                    <br></br>
+                                </p>    
+                            <h4 style="color: white; font-weight: bold;">Problem: </h4><br>
+                                <p style="color: white;"> 
+                                    To make sure that the producer won’t try to add data into the buffer if it’s full and that the consumer won’t try to remove data from an empty buffer.
+                                </p><br></br>
+                            <h4 style="color: white; font-weight: bold;">Solution:</h4><br>
+                            <p style="color: white;"> The producer is to either go to sleep or discard data if the buffer is full. The next time the consumer removes an item from the buffer, it notifies the producer, who starts to fill the buffer again. In the same way, the consumer can go to sleep if it finds the buffer to be empty. The next time the producer puts data into the buffer, it wakes up the sleeping consumer. An inadequate solution could result in a deadlock where both processes are waiting to be awakened.
+                            </p><br></br>
                     </div>
                     
                 </div>

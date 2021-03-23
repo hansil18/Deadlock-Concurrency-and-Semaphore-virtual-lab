@@ -47,13 +47,15 @@
                 <div>
                     <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">PETERSON METHOD</h1>
                     <div class="hidden1" id="show">
-                        <div class="container">
+                        <div class="container" style="text-align: left;">
                             <p class="text-white justify-content-center">
                                 Concurrent programming algorithm for mutual exclusion that allows two or more processes to share a single-use resource <br>
                                 without conflict, using only shared memory for communication. <br>
                                 <h4 style="color: white; font-weight: bold;">Characteristics of  Peterson Algorithm approach: </h4><br>
                                 <p style="color: white;"> 
                                     1. Mutual Exclusion: The method provides mutual exclusion for sure. In entry section, the while condition involves the criteria for two variables <br><br></br>
+                                    2.Progress:
+                                    An uninterested process will never stop the other interested process from entering in the critical section.<br> If the other process is also interested then the process will wait.
                                     3.Bounded waiting:
                                     The interested variable mechanism failed because it was not providing bounded waiting. However, in Peterson solution,<br> A deadlock can never happen because the process which first sets the turn variable will enter in the critical section for sure.<br> Therefore, if a process is preempted after executing line number 4 of the entry section then it will definitely get into the critical section in its next chance.
                                     <br></br>
