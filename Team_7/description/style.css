@@ -333,15 +333,27 @@ td {
   padding: 15px 0;
   overflow: hidden;
 }
-
+.align_kar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.subflex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* demo styles */
-
+img {
+  height: 500px;
+  width: 350px;
+}
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body {
-  background-color: #d4418e;
-  background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
+  background: -webkit-linear-gradient(left, #0652c5, #d4418e);
+  background: linear-gradient(to right, #0652c5, #d4418e);
   font-family: "Roboto", sans-serif;
-  background-size: 1800px 1000px;
 }
 
 section {
