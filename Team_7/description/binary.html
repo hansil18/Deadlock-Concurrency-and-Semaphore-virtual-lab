@@ -47,29 +47,27 @@
             <div>
                 <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">BINARY SEMAPHORE</h1>
                 <div class="hidden1" id="show">
-                    <div class="container" >
+                    <div class="container" style="text-align: left;">
                             <p class="text-white justify-content-left">
-
-                                Has 0 and 1 value.  The wait operation only works when the semaphore is 1 and the signal operation succeeds when semaphore is 0
-                                <br>
-<h4 style="color: white; font-weight: bold;">Analysis of Binary Semaphore approach: </h4><br>
-<p style="color: white;"> 
-    1. A binary semaphore has two components-<br>
-    a.  An integer value which can be either 0 or 1.<br>
-    b.  An associated waiting list (usually a queue).<br>
-    <br> 2. The waiting list of binary semaphore contains the processes that got blocked when trying to enter the critical section.<br>
-    <br>3. In waiting list, the blocked processes are put to sleep.<br>
-        <br>   4. The waiting list is usually implemented using a queue data structure.
-       <br><br> 5. Using a queue as waiting list ensures bounded waiting.
-        <br><br>6. This is because the process which arrives first in the waiting queue gets the chance to enter the critical section first.
-        <br><br>7. The wait operation is executed when a process tries to enter the critical section.
-        <br><br>8. The signal operation is executed when a process takes exit from the critical section.
-        <br><br>9. Binary semaphores are mainly used for two purposes-
-           <br> a. To ensure mutual exclusion.
-            <br>b. To implement order in which the process must execute.
-</p>
+                                Has 0 and 1 value.  The wait operation only works when the semaphore is 1 and the signal operation succeeds when semaphore is 0 <br>
+                                <h4 style="color: white; font-weight: bold;">Analysis of Binary Semaphore approach: </h4><br>
+                                <p style="color: white;"> 
+                                    1. A binary semaphore has two components-<br>
+                                    a.  An integer value which can be either 0 or 1.<br>
+                                    b.  An associated waiting list (usually a queue).<br>
+                                    <br>2. The waiting list of binary semaphore contains the processes that got blocked when trying to enter the critical section.<br>
+                                    <br>3. In waiting list, the blocked processes are put to sleep.<br>
+                                    <br>4. The waiting list is usually implemented using a queue data structure.
+                                    <br><br> 5. Using a queue as waiting list ensures bounded waiting.
+                                        <br><br>6. This is because the process which arrives first in the waiting queue gets the chance to enter the critical section first.
+                                        <br><br>7. The wait operation is executed when a process tries to enter the critical section.
+                                        <br><br>8. The signal operation is executed when a process takes exit from the critical section.
+                                        <br><br>9. Binary semaphores are mainly used for two purposes-
+                                        <br>a. To ensure mutual exclusion.
+                                        <br>b. To implement order in which the process must execute.
+                                </p>
+                            </p>
                     </div>
-                    
                 </div>
             </div>
         </div>        <!-- Bootstrap core JS-->

@@ -47,35 +47,25 @@
             <div>
                 <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">LOCK VARIABLE</h1>
                 <div class="hidden1" id="show">
-                    <div class="container">
-                            <p class="text-white justify-content-center">
-
-Simplest synchronization mechanism-implemented in User mode-used for more than two processes. <br>
-// two values-0,1. 0 means critical section is vacant and 1 means critical section is occupied.
-
-<h4 style="color: white; font-weight: bold;">Analysis of Lock Variable: </h4><br>
-<p style="color: white;"> 
-    The lock variable mechanism doesn't provide Mutual Exclusion in some of the cases. This can be better described by looking at the pseudo code by the Operating System point of view I.E. Assembly code of the program. Let's convert the Code into the assembly language. <br>    
-    Load Lock, R0 <br>
-    CMP R0, #0 <br>
-    JNZ Step 1 <br> 
-    Store #1, Lock <br>
-    Store #0, Lock <br>
-    
-</p>
-<p style="color: white;">
-    The problem with the lock variable mechanism is that, at the same time, more than one process can see the vacant tag and more than one process can enter in the critical section. Hence, the lock variable doesn't provide the mutual exclusion that's why it cannot be used in general.
-    Since, this method is failed at the basic step; hence, there is no need to talk about the other conditions to be fulfilled.
-    </p>
-
-</p>
-
-
-
-
-
+                    <div class="container" style="text-align: left;">
+                        <p class="text-white justify-content-center">
+                            Simplest synchronization mechanism-implemented in User mode-used for more than two processes. <br>
+                            // two values-0,1. 0 means critical section is vacant and 1 means critical section is occupied.
+                            <h4 style="color: white; font-weight: bold;">Analysis of Lock Variable: </h4><br>
+                            <p style="color: white;"> 
+                                The lock variable mechanism doesn't provide Mutual Exclusion in some of the cases. This can be better described by looking at the pseudo code by the Operating System point of view I.E. Assembly code of the program. Let's convert the Code into the assembly language.<br>    
+                                Load Lock, R0 <br>
+                                CMP R0, #0 <br>
+                                JNZ Step 1 <br> 
+                                Store #1, Lock <br>
+                                Store #0, Lock <br>
+                            </p>
+                            <p style="color: white;">
+                                The problem with the lock variable mechanism is that, at the same time, more than one process can see the vacant tag and more than one process can enter in the critical section. Hence, the lock variable doesn't provide the mutual exclusion that's why it cannot be used in general.
+                                Since, this method is failed at the basic step; hence, there is no need to talk about the other conditions to be fulfilled.
+                            </p>
+                        </p>
                     </div>
-                    
                 </div>
             </div>
         </div>        <!-- Bootstrap core JS-->
