@@ -57,8 +57,23 @@
                             <h3 class="text-uppercase text-white font-weight-bold mb-0">BANKER'S ALGORITHM</h3>
                             <div class="hidden1" id="show">
                                 <div class="container">
-                                    <p class="text-white">Tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities..
-                                    </p>
+                                    <pre>
+                                        <p class="text-white justify-content-center">
+Tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities..
+
+Characteristics of Banker's Algorithm
+1. Keep many resources that satisfy the requirement of at least one client
+2. Whenever a process gets all its resources, it needs to return them in a restricted period.
+3. When a process requests a resource, it needs to wait
+4. The system has a limited number of resources
+5. Advance feature for max resource allocation
+
+Disadvantage of Banker's algorithm
+1. Does not allow the process to change its Maximum need while processing
+2. It allows all requests to be granted in restricted time, but one year is a fixed period for that.
+3. All processes must know and state their maximum resource needs in advance.
+                                        </p>
+                                    </pre>
                                 </div>
                                 <a class="btn btn-light btn-l" href="#">More Info</a>
                                 <a class="btn btn-light btn-l" href="banker.html">Demo</a>
@@ -84,7 +99,23 @@
                             <h3 class="text-uppercase text-white font-weight-bold mb-0">LOCK VARIALBE</h3>
                             <div class="hidden1" id="show">
                                 <div class="container">
-                                    <p class="text-white">Simplest synchronization mechanism-implemented in User mode-used for more than two processes.// two values-0,1. 0 means critical section is vacant and 1 means critical section is occupied.</p>
+                                    <pre>
+                                        <p class="text-white">
+Simplest synchronization mechanism-implemented in User mode-used for more than two processes.// two values-0,1. 0 means critical section is vacant and 1 means critical section is occupied.
+
+Analysis of Lock Variable
+The lock variable mechanism doesn't provide Mutual Exclusion in some of the cases. This can be better described by looking at the pseudo code by the Operating System point of view I.E. Assembly code of the program. Let's convert the Code into the assembly language.
+
+Load Lock, R0
+CMP R0, #0
+JNZ Step 1
+Store #1, Lock
+Store #0, Lock
+
+The problem with the lock variable mechanism is that, at the same time, more than one process can see the vacant tag and more than one process can enter in the critical section. Hence, the lock variable doesn't provide the mutual exclusion that's why it cannot be used in general.
+Since, this method is failed at the basic step; hence, there is no need to talk about the other conditions to be fulfilled.
+                                        </p>
+                                    </pre>
                                 </div>
                                 <a class="btn btn-light btn-l" href="#">More Info</a>
                                 <a class="btn btn-light btn-l" href="lockvari.html">Demo</a>
@@ -96,7 +127,24 @@
                             <h3 class="text-uppercase text-white font-weight-bold mb-0">TEST SET LOCK</h3>
                             <div class="hidden1" id="show">
                                 <div class="container">
-                                    <p class="text-white">Synchronization mechanism- uses test and set instructions to provide the synchronization among the processes executing concurrently.</p>
+                                    <pre>
+                                        <p class="text-white">
+Synchronization mechanism- uses test and set instructions to provide the synchronization among the processes executing concurrently.
+
+Analysis of Test And Set Lock
+Mutual Exclusion
+Mutual Exclusion is guaranteed in TSL mechanism since a process can never be preempted just before setting the lock variable. Only one process can see the lock variable as 0 at a particular time and that's why, the mutual exclusion is guaranteed.
+
+Progress
+According to the definition of the progress, a process which doesn't want to enter in the critical section should not stop other processes to get into it. In TSL mechanism, a process will execute the TSL instruction only when it wants to get into the critical section. The value of the lock will always be 0 if no process doesn't want to enter into the critical section hence the progress is always guaranteed in TSL.
+
+Bounded Waiting
+Bounded Waiting is not guaranteed in TSL. Some process might not get a chance for so long. We cannot predict for a process that it will definitely get a chance to enter in critical section after a certain time.
+
+Architectural Neutrality
+TSL doesn't provide Architectural Neutrality. It depends on the hardware platform. The TSL instruction is provided by the operating system. Some platforms might not provide that. Hence it is not Architectural natural.
+                                        </p>
+                                    </pre>
                                 </div>
                                 <a class="btn btn-light btn-l" href="#">More Info</a>
                                 <a class="btn btn-light btn-l" href="test_set.html">Demo</a>
