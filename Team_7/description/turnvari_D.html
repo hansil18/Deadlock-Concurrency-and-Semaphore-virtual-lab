@@ -52,24 +52,24 @@
                                 Software mechanism implemented at user mode-only for two processes. It is a lock shared by two processes.
 
 
-<h4 style="color: white; font-weight: bold;">Analysis of Turn Variable approach: </h4><br>
-<p style="color: white;"> 
-    Mutual Exclusion: <br>
-    The strict alternation approach provides mutual exclusion in every case. This procedure works only for two processes. The pseudo code is different for both of the processes. The process will only enter when it sees that the turn variable is equal to its Process ID otherwise not Hence No process can enter in the critical section regardless of its turn.
-    <br>
-   
-Progress: <br>
-Progress is not guaranteed in this mechanism. If P0 doesn't want to get enter into the critical section on its turn then P1 got blocked for infinite time. P1 has to wait for so long for its turn since the turn variable will remain 0 until P0 assigns it to 1. <br>
+                            <h4 style="color: white; font-weight: bold;">Analysis of Turn Variable approach: </h4><br>
+                            <p style="color: white;"> 
+                                Mutual Exclusion: <br>
+                                The strict alternation approach provides mutual exclusion in every case. This procedure works only for two processes. The pseudo code is different for both of the processes. The process will only enter when it sees that the turn variable is equal to its Process ID otherwise not Hence No process can enter in the critical section regardless of its turn.
+                                <br>
+                            
+                            Progress: <br>
+                            Progress is not guaranteed in this mechanism. If P0 doesn't want to get enter into the critical section on its turn then P1 got blocked for infinite time. P1 has to wait for so long for its turn since the turn variable will remain 0 until P0 assigns it to 1. <br>
 
-Portability <br>
-The solution provides portability. It is a pure software mechanism implemented at user mode and doesn't need any special instruction from the Operating System. <br>
-    
-</p>
+                            Portability <br>
+                            The solution provides portability. It is a pure software mechanism implemented at user mode and doesn't need any special instruction from the Operating System. <br>
+                                
+                            </p>
 
 
-</p>
+                            </p>
 
-</div>
+                    </div>
                     
                 </div>
             </div>
