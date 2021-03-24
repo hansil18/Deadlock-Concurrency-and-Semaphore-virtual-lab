@@ -50,50 +50,43 @@
                 <div class="hidden1" id="show">
                     <div class="container" style="text-align: left;">
                         <p class="text-white justify-content-center">
-                                Software mechanism implemented at user mode-only for two processes. It is a lock shared by two processes.
-
-
+                            Software mechanism implemented at user mode-only for two processes. It is a lock shared by two processes.
                             <h4 style="color: white; font-weight: bold;">Analysis of Turn Variable approach: </h4><br>
                             <p style="color: white;"> 
                                 Mutual Exclusion: <br>
                                 The strict alternation approach provides mutual exclusion in every case. This procedure works only for two processes. The pseudo code is different for both of the processes. The process will only enter when it sees that the turn variable is equal to its Process ID otherwise not Hence No process can enter in the critical section regardless of its turn.
                                 <br>
-                            
                             Progress: <br>
                             Progress is not guaranteed in this mechanism. If P0 doesn't want to get enter into the critical section on its turn then P1 got blocked for infinite time. P1 has to wait for so long for its turn since the turn variable will remain 0 until P0 assigns it to 1. <br>
-
                             Portability <br>
                             The solution provides portability. It is a pure software mechanism implemented at user mode and doesn't need any special instruction from the Operating System. <br>
-                                
                             </p>
-
-
-                            </p>
-
+                        </p>
                     </div>
                     
                 </div>
             </div>
-            <h3 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">Steps</h3>
+            <h3 class="text-uppercase text-white font-weight-bold py-3">Steps</h3>
                 <div class="row">
                     <div class="col-md-6 ">
                         <img src="./img/ternin.jpg" class="img-fluid" alt="Lights" style="width:100%">
                     </div>
-                    <div class="col-md-6 " style="margin-top: 15%;">
+                    <div class="col-md-6 " style="margin-top: 10%;">
                         <h3 class="text-uppercase text-white font-weight-bold text-center pb-3" style="font-weight: bolder;">Input</h3> 
                         <p style="color: white;">
-                            To take input enter space separated value and for new row and for new row enter in the new line
+                            Initially there will be already 2 process in the initial state.<br><br>
+                            For processing a process click on the respective process button and the process will be added to the respective state. 
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6" style="margin-top: 15%;">
+                    <div class="col-md-6" style="margin-top: 10%;">
                         <h3 class="text-uppercase text-white font-weight-bold text-center pb-3" style="font-weight: bolder;">Output</h3> 
                         <p style="color: white;">
-                            The output will the process safe sequence and if there is a deadlock condition than deadlock status will be shown. 
+                            The output will be according to the user input on the respective process for different states and according to the turn state.  
                         </p>
                         <p style="color: white;">
-                            The input given by the user is also shown in the graph.
+                            Turn variable is shown above added state. 
                         </p>
                     </div>
                     <div class="col-md-6">
