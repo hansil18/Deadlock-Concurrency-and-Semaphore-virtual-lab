@@ -445,7 +445,7 @@ section {
   height: 35px;
   padding-bottom: 4px;
   border: 2px solid white;
-  width: 15%;
+  width: 12%;
   height: 10%;
 }
 
@@ -453,7 +453,7 @@ section {
   background-color: #148f77;
   text-decoration: none;
   color: white;
-  width: 20%;
+  width: 16%;
 }
 @media all and (max-width: 30em) {
   .button00 {
