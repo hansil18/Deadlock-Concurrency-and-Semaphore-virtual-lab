@@ -445,13 +445,15 @@ section {
   height: 35px;
   padding-bottom: 4px;
   border: 2px solid white;
+  width: 15%;
+  height: 10%;
 }
 
 .button00:hover {
   background-color: #148f77;
   text-decoration: none;
   color: white;
-  width: 10%;
+  width: 20%;
 }
 @media all and (max-width: 30em) {
   .button00 {
